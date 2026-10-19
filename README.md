@@ -110,14 +110,12 @@ Run the Ansible playbook (ansible.yml) which executes the roles sequentially (co
 
 Once the playbook execution finishes successfully:
 
-    Open web browser.   
-
-    Navigate to:
+Open web browser and navigate to:
 `
     http://<Your_Terraform_Public_IP>
 `
 
-The live Mini Finance Project website served securely through Nginx should be seen      
+The live Mini Finance Project website served securely through Nginx should be seen.     
 
 ## Cleanup (Optional)
 
