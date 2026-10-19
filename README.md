@@ -7,15 +7,15 @@ The project deploys the Mini Finance static web application on an Amazon Linux s
 
 ## Architecture & Tech Stack
 
-    Cloud Provider: Amazon Web Services (AWS)   
+Cloud Provider: Amazon Web Services (AWS)   
 
-    Infrastructure as Code: Terraform (Provisioning VPC/Subnets, Security Groups, EC2 Instance, Public IP)   
+Infrastructure as Code: Terraform (Provisioning VPC/Subnets, Security Groups, EC2 Instance, Public IP)   
 
-    Configuration Management: Ansible Roles (common, nginx, mini_finance)   
+Configuration Management: Ansible Roles (common, nginx, mini_finance)   
 
-    Web Server: Nginx 
+Web Server: Nginx 
 
-    Application Source: Mini Finance Static Site   
+Application Source: Mini Finance Static Site   
 
 ## Project Directory Structure
 
@@ -39,13 +39,13 @@ mini-finance-project/
 
 Before running this project, ensure you have the following tools installed and configured locally:
 
-    Terraform  
+Terraform  
 
-    Ansible
+Ansible
 
-    AWS CLI (authenticated via aws configure)   
+AWS CLI (authenticated via aws configure)   
 
-    An active SSH key pair configured in your AWS account and locally (~/.ssh/id_rsa and ~/.ssh/id_rsa.pub)   
+An active SSH key pair configured in your AWS account and locally (~/.ssh/id_rsa and ~/.ssh/id_rsa.pub)   
 
 ## Deployment Instructions
 Step 1: Provision Infrastructure with Terraform
