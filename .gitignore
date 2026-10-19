@@ -1,0 +1,16 @@
+# Terraform local state and configuration
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+
+# Key files and sensitive credentials
+*.pem
+*.rsa
+id_rsa
+id_rsa.pub
+
+# OS generated files
+.DS_Store
+Thumbs.db

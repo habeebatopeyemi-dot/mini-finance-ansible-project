@@ -1,0 +1,35 @@
+- name: Install Nginx
+  ansible.builtin.dnf:
+    name: nginx
+    state: present
+    update_cache: true
+
+- name: Start and Enable Nginx
+  ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: true
+
+
+- name: Overwrite default Nginx site configuration
+  ansible.builtin.copy:
+    dest: /etc/nginx/conf.d/default.conf
+    content: |
+      server {
+          listen 80;
+          server_name _;
+          root /usr/share/nginx/html;
+          index index.html;
+          location / {
+              try_files $uri /index.html;
+          }
+          error_page 404 /index.html;
+      }
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Restart Nginx after configuration
+  ansible.builtin.service:
+    name: nginx
+    state: restarted

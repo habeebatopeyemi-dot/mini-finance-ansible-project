@@ -1,0 +1,16 @@
+- name: Update dnf cache
+  ansible.builtin.dnf:
+    update_cache: true
+
+- name: Upgrade all packages
+  ansible.builtin.dnf:
+    name:
+      - "*"
+    state: latest
+
+- name: Install basic packages
+  ansible.builtin.dnf:
+    name:
+      - git
+      - unzip
+    state: present
